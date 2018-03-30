@@ -13,8 +13,15 @@ class Header extends Component {
         <div className='links'>
             <Link to='/'> Home </Link>
             <Link to='/login'> Login </Link>
+            
             <Link to='/storycard'> StoryCard </Link>
             <Link to='/admin'> Admin </Link> 
+          </div>
+          <div>
+          {this.props.authenticated
+            ? <Link to='/login'>Login</Link>
+            : null
+          }
           </div>
       </nav>
     );
