@@ -9,12 +9,10 @@ class StoryCard extends Component {
       index: 0,
       direction: null
     };
-
     this.handleSelect = this.handleSelect.bind(this);
   }
 
   handleSelect(selectedIndex, e) {
-    // alert(`selected=${selectedIndex}, direction=${e.direction}`);
     this.setState({
       index: selectedIndex,
       direction: e.direction

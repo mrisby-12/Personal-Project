@@ -10,7 +10,8 @@ class Admin extends Component {
     this.state = {
       cardTitle: '',
       imageURL: '',
-      siteURL: '',  
+      siteURL: '',
+      about: '',  
       items: []
     }
     this.handleChange = this.handleChange.bind(this);
@@ -28,13 +29,15 @@ class Admin extends Component {
     const item = {
       title: this.state.cardTitle,
       image: this.state.imageURL,
-      site: this.state.siteURL
+      site: this.state.siteURL,
+      about: this.state.about
     }
     itemsRef.push(item);
     this.setState({
       cardTitle: '',
       imageURL: '',
-      siteURL: ''
+      siteURL: '',
+      about: ''
     });
   }
   componentDidMount() {
@@ -47,7 +50,8 @@ class Admin extends Component {
           id: item,
           title:items[item].title,
           image: items[item].image,
-          site: items[item].site
+          site: items[item].site,
+          about: items[item].about
         });
       }
       this.setState({
@@ -90,6 +94,7 @@ class Admin extends Component {
               <input type='text' name='cardTitle' placeholder='Enter title' onChange={this.handleChange} value={this.state.cardTitle} />
               <input type='text' name='imageURL' placeholder='Enter image URL' onChange={this.handleChange} value={this.state.imageURL} />
               <input type='text' name='siteURL' placeholder='Enter site URL' onChange={this.handleChange} value={this.state.siteURL} />
+              <input type='text' name='about' placeholder='About the site' onChange={this.handleChange} value={this.state.about} />
               <Button type='submit'>Add Item</Button>
             </form> 
           </div>
@@ -103,6 +108,7 @@ class Admin extends Component {
                     <th>Title</th>
                     <th>Image</th>
                     <th>URL</th>
+                    <th>About</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -113,6 +119,7 @@ class Admin extends Component {
                     <td>{item.title}</td>
                     <td>{item.image}</td>
                     <td>{item.site}</td>
+                    <td>{item.about}</td>
                 </tr> ) 
               })}
                 </tbody>
