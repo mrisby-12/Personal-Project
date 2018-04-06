@@ -1,34 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
-nav {
-  box-sizing: border-box;
-  background: lightgray;
-  display: flex;
-  overflow: hidden;
-  padding: 3em;
-  border-bottom: 1px solid #000;
-}
-
-.logo {
-  height: 75px;
-  width: 75px;
-  float: left;
-  margin-right: 1em;
-}
-
-.links {
-  color: #FFF;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0 2em;
-  margin: 0 auto;
-  text-align: center;
-
-}
 
 
 

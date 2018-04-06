@@ -3,6 +3,7 @@
     "appspot",
     "eoydpottzfoblt",
     "firebaseapp",
-    "firestore"
+    "firestore",
+    "mdbreact"
   ]
 }
