@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Badge, Carousel} from 'react-bootstrap';
+import React, { Component } from 'react';
+import { Badge, Carousel } from 'react-bootstrap';
 import { Button, Card, CardBody, CardImage, CardTitle, CardText } from 'mdbreact';
 import firebase from '../../firebase/firebase';
 import './StoryCard.css'
@@ -53,9 +53,9 @@ class StoryCard extends Component {
       <div>
         <h2>StoryCards</h2> 
       <Carousel className='carousel'
-        activeIndex={index}
-        direction={direction}
-        onSelect={this.handleSelect}>
+        activeIndex={ index }
+        direction={ direction }
+        onSelect={ this.handleSelect }>
           {this.state.items.map( (item) => {
             return (
               <Carousel.Item className='item'>

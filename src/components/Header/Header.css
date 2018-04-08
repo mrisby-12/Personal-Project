@@ -1,20 +1,32 @@
 .container {
   background: darkgray;
-  height: 20vh;
+  height: 25vh;
 }
 .logo {
-  height: 75px;
-  width: 75px;
-  float: left;
+  height: 90px;
+  width: 90px;
   margin-right: 1em;
 }
 
-h1 {
-  text-align: center;
-}
 
 .log-in {
   float: right;
+  color: white;
+}
+
+.log-in button {
+  background: #45526E;
+  height: 50px;
+  width: 150px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: -5px 5px 10px rgba(100,100,100,.8);
+}
+
+.log-in button:hover {
+  background: silver;
+  transition-duration: .6s;
+  transition-timing-function: ease;
 }
 
 @media screen and (min-width:768px){
@@ -24,10 +36,20 @@ h1 {
       display: block;
       width: 160px;
       text-align: center;
-      background-color: #eee;
+  }
+  h1{
+    margin-left: -35px;
   }
   .navbar>.container .navbar-brand-centered, 
   .navbar>.container-fluid .navbar-brand-centered {
       margin-left: -80px;
+  }
+}
+
+@media only screen and (max-width:768px){
+  .log-in button {
+    width: 85px;
+    position: relative;
+    left: 50%;
   }
 }

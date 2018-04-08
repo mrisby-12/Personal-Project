@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from './logo.png';
 import { auth, provider } from '../../firebase/firebase';
 import './Header.css';
@@ -39,7 +39,7 @@ class Header extends Component {
   componentDidMount() {
     auth.onAuthStateChanged( (user) => {
       if (user) {
-        this.setState( {user} );
+        this.setState( { user } );
       }
     });
   }
@@ -47,7 +47,7 @@ class Header extends Component {
   render() {
     
   return (
-      <nav className='navbar navbar-default' role='navigation'> 
+      <nav className='navbar navbar-default'> 
         <div className='container'>
           <div className='navbar-header'>
             <button type='button' className='navbar-toggle' data-toggle='collapse' data-target='#navbar-brand-centered'>
@@ -56,7 +56,7 @@ class Header extends Component {
               <span className='icon-bar'></span>
             </button>
             <div className='navbar-brand navbar-brand-centered'>
-              <img className='logo' src={Logo} alt='MK logo with light-bulb'/>
+              <img className='logo' src={ Logo } alt='MK logo'/>
               <h1>Inspiration</h1>
             </div>
             <div className='collapse navbar-collapse'  id='navbar-brand-centered'>
@@ -68,26 +68,23 @@ class Header extends Component {
             </div>
           </div>   
         <div className='log-in'>        
-        {this.state.user 
-          ?
-          <button onClick={this.logout}> <i class="fa fa-user-circle" aria-hidden="true"> <br/>Log Out</i></button>
-          :
-          <button onClick={this.login}>Log In <i class="fa fa-user-circle-o" aria-hidden="true"></i></button>
-        }
-        {this.state.user
-          ?
-          <div > HELLO, {this.state.user.displayName.toUpperCase()} <i class="fa fa-user" aria-hidden="true"></i>
-            </div>
-          :
-          <div> <p>You must be logged in to vote.</p>
-            </div>
-        }
-        </div>
+            {this.state.user 
+              ?
+              <button onClick={ this.logout }> <i class="fa fa-user-circle" aria-hidden="true"> <br/>Log Out</i></button>
+              :
+              <button onClick={ this.login }>Log In <i class="fa fa-user-circle-o" aria-hidden="true"></i></button>
+            }
+            {this.state.user
+              ?
+              <div> HELLO, { this.state.user.displayName.toUpperCase() } </div>
+              :
+              <div> <p>You must be logged in to vote.</p> </div>
+            }
+          </div>
         </div>
       </nav>
     );
   }
 }
-
 export default Header;
 

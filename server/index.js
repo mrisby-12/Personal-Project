@@ -4,18 +4,8 @@ const express = require('express');
 const {json} = require('body-parser');
 const cors = require('cors');
 const session = require('express-session');
-const passport = require('passport');
-const Auth0Strategy = require('passport-auth0');
-const massive = require('massive');
 const path = require('path');
 
-//CONNECT TO DB W/MASSIVE
-massive(process.env.CONNECTION_STRING)
-  .then(db => {
-    app.set('db', db);
-  })
-  .catch(err => console.log(err));
-  
 
 //PORT
 const port = 3001;
