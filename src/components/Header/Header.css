@@ -29,6 +29,13 @@
   transition-timing-function: ease;
 }
 
+.storycard {
+  color: #777777;
+  font-family: Ubuntu, sans-serif;
+  margin-top: 1.6vh;
+
+}
+
 @media screen and (min-width:768px){
   .navbar-brand-centered {
       position: absolute;
@@ -44,6 +51,7 @@
   .navbar>.container-fluid .navbar-brand-centered {
       margin-left: -80px;
   }
+ 
 }
 
 @media only screen and (max-width:768px){
@@ -51,5 +59,8 @@
     width: 85px;
     position: relative;
     left: 50%;
+  }
+  .storycard {
+    margin-top: 0;
   }
 }

@@ -45,7 +45,7 @@ class Header extends Component {
   }
 
   render() {
-    
+  console.log(this.props)  
   return (
       <nav className='navbar navbar-default'> 
         <div className='container'>
@@ -62,7 +62,8 @@ class Header extends Component {
             <div className='collapse navbar-collapse'  id='navbar-brand-centered'>
               <ul className='nav navbar-nav'>
                 <li><Link to='/'> Home </Link></li>
-                <li><Link to='/storycard'> StoryCard </Link></li>
+                { this.props.headerCheck ? 
+                <li className='storycard'><div onClick={ () => this.props.scrollDown() }> StoryCard </div></li> : <li><Link to='/storycard'>StoryCard</Link></li> }
                 <li><Link to='/admin'> Admin </Link></li>
               </ul>
             </div>
@@ -70,9 +71,9 @@ class Header extends Component {
         <div className='log-in'>        
             {this.state.user 
               ?
-              <button onClick={ this.logout }> <i class="fa fa-user-circle" aria-hidden="true"> <br/>Log Out</i></button>
+              <button onClick={ this.logout }> <i className="fa fa-user-circle" aria-hidden="true"> <br/>Log Out</i></button>
               :
-              <button onClick={ this.login }>Log In <i class="fa fa-user-circle-o" aria-hidden="true"></i></button>
+              <button onClick={ this.login }>Log In <i className="fa fa-user-circle-o" aria-hidden="true"></i></button>
             }
             {this.state.user
               ?

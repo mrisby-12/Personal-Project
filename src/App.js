@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import routes from './routes';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import ScrollButton from './components/ScrollButton/ScrollButton';
 
 class App extends Component {
 
@@ -9,9 +10,9 @@ class App extends Component {
     return (
       <div>
         <div>
-          <Header />
           { routes }
         </div> 
+          <ScrollButton />
           <Footer />
       </div>
     );

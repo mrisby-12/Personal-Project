@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Admin.css'
 import { Table, Checkbox, Button } from 'react-bootstrap';
 import firebase from '../../firebase/firebase';
+import Header from '../Header/Header'
 
 class Admin extends Component {
   constructor() {
@@ -11,7 +12,9 @@ class Admin extends Component {
       cardTitle: '',
       imageURL: '',
       siteURL: '',
-      about: '',  
+      about: '', 
+      likes: 0,
+      dislikes: 0, 
       items: []
     }
     this.handleChange = this.handleChange.bind(this);
@@ -30,14 +33,18 @@ class Admin extends Component {
       title: this.state.cardTitle,
       image: this.state.imageURL,
       site: this.state.siteURL,
-      about: this.state.about
+      about: this.state.about,
+      likes: this.state.likes,
+      dislikes: this.state.dislikes
     }
     itemsRef.push(item);
     this.setState({
       cardTitle: '',
       imageURL: '',
       siteURL: '',
-      about: ''
+      about: '',
+      likes: 0,
+      dislikes: 0
     });
   }
   componentDidMount() {
@@ -51,7 +58,9 @@ class Admin extends Component {
           title:items[item].title,
           image: items[item].image,
           site: items[item].site,
-          about: items[item].about
+          about: items[item].about,
+          likes: items[item].likes,
+          dislikes: items[item].dislikes
         });
       }
       this.setState({
@@ -59,11 +68,13 @@ class Admin extends Component {
       });
     });
   }
-
+ 
+  
   render() {
     
     return(
       <div className='admin'>
+        <Header />
         <h2> Admin </h2> 
         <hr />
         <h4>Users</h4>
@@ -95,6 +106,8 @@ class Admin extends Component {
               <input type='text' name='imageURL' placeholder='Enter image URL' onChange={this.handleChange} value={this.state.imageURL} />
               <input type='text' name='siteURL' placeholder='Enter site URL' onChange={this.handleChange} value={this.state.siteURL} />
               <input type='text' name='about' placeholder='About the site' onChange={this.handleChange} value={this.state.about} />
+              <input type='text' name='likes' placeholder='Positive Votes' onChange={this.handleChange} value={this.state.likes} />
+              <input type='text' name='dislikes' placeholder='Negative Votes' onChange={this.handleChange} value={this.state.dislikes} />
               <Button type='submit'>Add Item</Button>
             </form> 
           </div>
@@ -109,6 +122,8 @@ class Admin extends Component {
                     <th>Image</th>
                     <th>URL</th>
                     <th>About</th>
+                    <th>Positive Votes</th>
+                    <th>Negative Votes</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -120,6 +135,8 @@ class Admin extends Component {
                     <td>{item.image}</td>
                     <td>{item.site}</td>
                     <td>{item.about}</td>
+                    <td>{item.likes}</td>
+                    <td>{item.dislikes}</td>
                 </tr> ) 
               })}
                 </tbody>

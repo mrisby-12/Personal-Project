@@ -1,5 +1,9 @@
 h2 {
+  font-size: 80px;
+  font-family: 'Kaushan Script', cursive;
   text-align: center;
+  color: #45526e;
+  margin-bottom: 15px;
 }
 .carousel {
   -moz-box-sizing: border-box;
