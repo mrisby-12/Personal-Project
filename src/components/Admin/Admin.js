@@ -156,7 +156,8 @@ class Admin extends Component {
               onChange={this.handleChange}
               value={this.state.phone}
             />
-            <Button type="submit">Add Item</Button>
+            <br />
+            <Button className='button' type="submit">Add Item</Button>
           </form>
         </div>
         <hr />
@@ -257,7 +258,8 @@ class Admin extends Component {
               onChange={this.handleChange}
               value={this.state.dislikes}
             />
-            <Button type="submit">Add Item</Button>
+            <br />
+            <Button className='button' type="submit">Add Item</Button>
           </form>
         </div>
         <hr />

@@ -46,13 +46,7 @@ class Header extends Component {
       email: user.email,
       phone: user.phoneNumber,
     }
-    usersRef.push(newUser);
-    // this.setState({
-    //   userId: '',
-    //   displayName: '',
-    //   email: '',
-    //   phone: '',
-    // });
+ 
   }
   componentDidMount() {
     auth.onAuthStateChanged( (user) => {
@@ -93,7 +87,7 @@ class Header extends Component {
             }
             {this.state.user
               ?
-              <div> HELLO, { this.state.user.displayName.toUpperCase() } </div>
+              <div> Hello, { this.state.user.displayName } </div>
               :
               <div> <p>Please log in to vote.</p> </div>
             }

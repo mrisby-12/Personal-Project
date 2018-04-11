@@ -1,7 +1,14 @@
 .container {
-  background: darkgray;
+  background: #5A3F3A;
   height: 25vh;
+  width: 100%;
 }
+
+h1 {
+  color: #E4D8CE;
+  
+}
+
 .logo {
   height: 90px;
   width: 90px;
@@ -11,11 +18,12 @@
 
 .log-in {
   float: right;
-  color: white;
+  color: #E4D8CE;
+  margin: 40px;
 }
 
 .log-in button {
-  background: #45526E;
+  background: #7D6577;
   height: 50px;
   width: 150px;
   margin: 20px auto;
@@ -24,17 +32,11 @@
 }
 
 .log-in button:hover {
-  background: silver;
+  background: #C2ADBD;
   transition-duration: .6s;
   transition-timing-function: ease;
 }
 
-.storycard {
-  color: #777777;
-  font-family: Ubuntu, sans-serif;
-  margin-top: 1.6vh;
-
-}
 
 @media screen and (min-width:768px){
   .navbar-brand-centered {
@@ -43,6 +45,7 @@
       display: block;
       width: 160px;
       text-align: center;
+      
   }
   h1{
     margin-left: -35px;
@@ -51,16 +54,21 @@
   .navbar>.container-fluid .navbar-brand-centered {
       margin-left: -80px;
   }
- 
+  .nav {
+    margin: 40px;
+    margin-left: -15px;
+    color: #E4D8CE;
+    padding: 35px;
+  }
 }
 
 @media only screen and (max-width:768px){
   .log-in button {
     width: 85px;
     position: relative;
-    left: 50%;
+    left: 50%; 
   }
-  .storycard {
-    margin-top: 0;
+  .nav {
+    color: #E4D8CE;
   }
 }

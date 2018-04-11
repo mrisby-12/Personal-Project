@@ -2,16 +2,20 @@ h2 {
   font-size: 80px;
   font-family: 'Kaushan Script', cursive;
   text-align: center;
-  color: #45526e;
-  margin-bottom: 15px;
+  color: #100F29;
+  margin-bottom: 20px;
 }
 .carousel {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   height: 100%;
   width: 100%; 
-  background: #FFF;
+  background: #513D3C;
   margin: 0 auto;
+}
+
+.carousel-control {
+  width: 5%;
 }
 
 .item {
@@ -35,7 +39,7 @@ h2 {
 }
 
 .card-body {
-  background: darkgrey;
+  background: #E4D8CE;
   padding: 10px;
 }
 
@@ -46,7 +50,19 @@ h2 {
 
 .button {
   margin: 20px 5px;
+  background: #7D6577;
+  color: #E4D8CE;
+  font-size: 20px;
   
+}
+
+.button:hover {
+  background: #c2adbd;
+}
+
+.badge {
+  background: #100F29;
+  font-size: 15px;
 }
 
 .img-card {
