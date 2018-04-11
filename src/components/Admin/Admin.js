@@ -80,7 +80,7 @@ class Admin extends Component {
     firebase
       .database()
       .ref("items/" + id + "/" + property)
-      .update(value);
+      .set(value);
   }
   componentDidMount() {
     const itemsRef = firebase.database().ref("items");

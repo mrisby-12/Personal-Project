@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
-@import '../../../node_modules/animate.css';
 
 .page-title {
   font-size: 80px;
@@ -7,6 +6,7 @@
   text-align: center;
   color: #100F29;
   margin-bottom: 15px;
+  animation: zoomIn 5s;
   
 }
 
@@ -49,5 +49,4 @@
   transform: scale(1.15);
   filter: none;
 }
-
 
