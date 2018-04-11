@@ -61,7 +61,7 @@ class StoryCard extends Component {
     let item = firebase.database().ref(`items/${id}/likes`);
     item.transaction(function(currentLikes) {
       return currentLikes + 1;
-    });
+    },);
   }
   addDislikes(id) {
     let item = firebase.database().ref(`items/${id}/dislikes`);

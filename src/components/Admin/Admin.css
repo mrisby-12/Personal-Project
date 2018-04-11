@@ -1,0 +1,29 @@
+.admin {
+  margin: 15px;
+}
+
+tbody input {
+  display: block; 
+  padding: 0; 
+  margin: 0; 
+  border: 0; 
+  width: 100%;
+}
+
+td {
+  margin: 0; 
+  padding: 0;
+}
+
+.to-edit {
+  color: darkgray;
+  font-style: italic;
+}
+
+Table {
+  display: flex-column;
+}
+
+/* .userID-col {
+  background: cadetblue;
+} */

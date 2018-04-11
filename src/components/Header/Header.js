@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from './logo.png';
 import { auth, provider } from '../../firebase/firebase';
+import firebase from '../../firebase/firebase';
 import './Header.css';
 
 class Header extends Component {
@@ -31,10 +32,27 @@ class Header extends Component {
     .signInWithPopup(provider)
     .then( (result) => {
       const user = result.user;
+      this.handleUserSubmit(user)
       this.setState({
         user
       });
     });
+  }
+  handleUserSubmit(user) {
+    const usersRef = firebase.database().ref('users');
+    const newUser = {
+      userId: user.uid,
+      displayName: user.displayName,
+      email: user.email,
+      phone: user.phoneNumber,
+    }
+    usersRef.push(newUser);
+    // this.setState({
+    //   userId: '',
+    //   displayName: '',
+    //   email: '',
+    //   phone: '',
+    // });
   }
   componentDidMount() {
     auth.onAuthStateChanged( (user) => {
@@ -45,8 +63,7 @@ class Header extends Component {
   }
 
   render() {
-  console.log(this.props)  
-  return (
+    return (
       <nav className='navbar navbar-default'> 
         <div className='container'>
           <div className='navbar-header'>
@@ -62,8 +79,7 @@ class Header extends Component {
             <div className='collapse navbar-collapse'  id='navbar-brand-centered'>
               <ul className='nav navbar-nav'>
                 <li><Link to='/'> Home </Link></li>
-                { this.props.headerCheck ? 
-                <li className='storycard'><div onClick={ () => this.props.scrollDown() }> StoryCard </div></li> : <li><Link to='/storycard'>StoryCard</Link></li> }
+                <li><Link to='/storycard'> StoryCard </Link></li>
                 <li><Link to='/admin'> Admin </Link></li>
               </ul>
             </div>
@@ -79,7 +95,7 @@ class Header extends Component {
               ?
               <div> HELLO, { this.state.user.displayName.toUpperCase() } </div>
               :
-              <div> <p>You must be logged in to vote.</p> </div>
+              <div> <p>Please log in to vote.</p> </div>
             }
           </div>
         </div>
