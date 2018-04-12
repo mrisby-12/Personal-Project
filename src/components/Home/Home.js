@@ -12,30 +12,28 @@ class Home extends Component {
             <div className="gallery-item">
               <img
                 className="gallery-image one animated"
-                src="https://cdn.pixabay.com/photo/2017/12/28/08/39/binary-3044663__480.jpg
-"
+                src="https://firebasestorage.googleapis.com/v0/b/personal-project-3598c.appspot.com/o/Home%20Images%2Fbinary-3044663__480.jpg?alt=media&token=e2779373-0c02-4190-8525-f06deaa0a95f"
                 alt="Binary One Null Space Universe Planet Earth"
               />
             </div>
             <div className="gallery-item">
               <img
                 className="gallery-image two animated"
-                src="https://cdn.pixabay.com/photo/2018/02/16/10/52/wood-3157395__480.jpg
-"
+                src="https://firebasestorage.googleapis.com/v0/b/personal-project-3598c.appspot.com/o/Home%20Images%2Fwood-3157395__480two.jpg?alt=media&token=39e1af1f-7db4-478d-9bbb-689976acf4da"
                 alt="Wood Aerial Background Beverage Blog Blogger"
               />
             </div>
             <div className="gallery-item">
               <img
                 className="gallery-image three animated"
-                src="https://cdn.pixabay.com/photo/2018/02/23/09/13/city-3175057__480.jpg"
+                src="https://firebasestorage.googleapis.com/v0/b/personal-project-3598c.appspot.com/o/Home%20Images%2Fcity-3175057__480three.jpg?alt=media&token=8dd3f778-47b4-46d8-b7d4-10b568b2719a"
                 alt="City Skyline Community Social Media Monitor"
               />
             </div>
             <div className="gallery-item">
               <img
                 className="gallery-image four animated"
-                src="https://cdn.pixabay.com/photo/2017/12/18/13/59/create-3026190__480.jpg"
+                src="https://firebasestorage.googleapis.com/v0/b/personal-project-3598c.appspot.com/o/Home%20Images%2Fcreate-3026190__480four.jpg?alt=media&token=42dc9fb9-1a14-450a-9b0b-d83fd32355ca"
                 alt=""
               />
             </div>
@@ -45,7 +43,7 @@ class Home extends Component {
                 type="text/html"
                 width="480"
                 height="270"
-                src="https://www.youtube.com/embed/KgMpKsp23yY?autoplay=1&controls=0&disablekb=1&enablejsapi=1&fs=0&loop=1&modestbranding=1&playsinline=1&rel=0&showinfo=0&amp;start=4&iv_load_policy=3"
+                src="https://www.youtube.com/embed/KgMpKsp23yY?autoplay=1&controls=0&disablekb=0&enablejsapi=1&fs=0&loop=1&modestbranding=1&playsinline=1&rel=0&showinfo=0&amp;start=4&iv_load_policy=3"
                 frameborder="0"
                 allowfullscreen
               />
@@ -53,29 +51,29 @@ class Home extends Component {
             <div className="gallery-item">
               <img
                 className="gallery-image five animated"
-                src="https://cdn.pixabay.com/photo/2018/02/13/06/59/smartphone-3149992__480.jpg"
+                src="https://firebasestorage.googleapis.com/v0/b/personal-project-3598c.appspot.com/o/Home%20Images%2Fsmartphone-3149992__480five.jpg?alt=media&token=7396b736-bfea-4e6e-ae04-4badae5c8fa0"
                 alt="Smartphone Hand Technology Computer Company"
               />
             </div>
             <div className="gallery-item">
               <img
                 className="gallery-image six animated"
-                src="https://cdn.pixabay.com/photo/2018/03/11/09/25/time-3216282__480.jpg"
+                src="https://firebasestorage.googleapis.com/v0/b/personal-project-3598c.appspot.com/o/Home%20Images%2Ftime-3216282__480six.jpg?alt=media&token=9ed7e9cf-961d-4f2f-b991-443f3088a1dc"
                 alt="Time Time Management Stopwatch Keyboard Computer"
               />
             </div>
             <div className="gallery-item">
               <img
                 className="gallery-image seven animated"
-                src="https://cdn.pixabay.com/photo/2017/12/29/22/10/background-3048816__480.jpg"
+                src="https://firebasestorage.googleapis.com/v0/b/personal-project-3598c.appspot.com/o/Home%20Images%2Fbackground-3048816__480seven.jpg?alt=media&token=9a1d4cbc-ac4c-44be-96cb-ed4c0de142df"
                 alt="Background Waters Computer Laptop Ocean Collage"
               />
             </div>
             <div className="gallery-item">
               <img
                 className="gallery-image eight animated"
-                src="https://cdn.pixabay.com/photo/2017/08/01/13/47/light-2565575__480.jpg"
-                alt=""
+                src="https://firebasestorage.googleapis.com/v0/b/personal-project-3598c.appspot.com/o/Home%20Images%2Flight-2565575__480eight.jpg?alt=media&token=5f6fef10-2e74-4cd8-adc6-c54cf7fa9a8b"
+                alt="bronze light bulb"
               />
             </div>
           </div>

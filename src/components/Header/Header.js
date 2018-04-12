@@ -6,50 +6,10 @@ import firebase from "../../firebase/firebase";
 import "./Header.css";
 
 class Header extends Component {
-  constructor() {
-    super();
 
-    this.state = {
-      user: null
-    };
-    this.login = this.login.bind(this);
-    this.logout = this.logout.bind(this);
-  }
-  handleChange(e) {}
-  logout() {
-    auth.signOut().then(() => {
-      this.setState({
-        user: null
-      });
-    });
-  }
-  login() {
-    auth.signInWithPopup(provider).then(result => {
-      const user = result.user;
-      this.handleUserSubmit(user);
-      this.setState({
-        user
-      });
-    });
-  }
-  handleUserSubmit(user) {
-    const usersRef = firebase.database().ref("users");
-    const newUser = {
-      userId: user.uid,
-      displayName: user.displayName,
-      email: user.email,
-      phone: user.phoneNumber
-    };
-  }
-  componentDidMount() {
-    auth.onAuthStateChanged(user => {
-      if (user) {
-        this.setState({ user });
-      }
-    });
-  }
 
   render() {
+    const { login, logout }=this.props
     return (
       <nav className="navbar navbar-default">
         <div className="container">
@@ -79,8 +39,8 @@ class Header extends Component {
                 <li className="nav-links">
                   <Link to="/storycard"> StoryCard </Link>
                 </li>
-                {this.state.user &&
-                  this.state.user.uid === "Gdy8DXrajWQf8y6rkMm4qnCDpFj1" && (
+                {this.props.user &&
+                  this.props.user.uid === "Gdy8DXrajWQf8y6rkMm4qnCDpFj1" && (
                     <li className="nav-links">
                       <Link to="/admin"> Admin </Link>
                     </li>
@@ -89,8 +49,8 @@ class Header extends Component {
             </div>
           </div>
           <div className="log-in">
-            {this.state.user ? (
-              <button onClick={this.logout}>
+            {this.props.user ? (
+              <button onClick={logout}>
                 {" "}
                 <i className="fa fa-user-circle" aria-hidden="true">
                   {" "}
@@ -98,16 +58,15 @@ class Header extends Component {
                 </i>
               </button>
             ) : (
-              <button onClick={this.login}>
+              <button onClick={login}>
                 Log In <i className="fa fa-user-circle-o" aria-hidden="true" />
               </button>
             )}
-            {this.state.user ? (
-              <div> Hello, {this.state.user.displayName} </div>
+            {this.props.user ? (
+              <div> Hello, {this.props.user.displayName} </div>
             ) : (
               <div>
-                {" "}
-                <p>Please log in to vote.</p>{" "}
+                <p>Please log in to vote.</p>
               </div>
             )}
           </div>

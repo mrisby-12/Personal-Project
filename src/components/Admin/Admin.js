@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Admin.css";
 import { Table, Button } from "react-bootstrap";
 import firebase from "../../firebase/firebase";
+import {Redirect} from 'react-router-dom'
 
 
 class Admin extends Component {
@@ -327,6 +328,8 @@ class Admin extends Component {
             })}
           </tbody>
         </Table>
+        {this.props.user &&
+                  this.props.user.uid === "Gdy8DXrajWQf8y6rkMm4qnCDpFj1" ?  null : <Redirect to="/" />}
       </div>
     );
   }
