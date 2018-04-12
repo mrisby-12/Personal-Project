@@ -13,6 +13,9 @@ const port = 3001;
 //APP DECLARATION
 const app = express();
 
+//SERVE OUT BUILD FOLDER
+app.use(express.static(`${__dirname}/../build`))
+
 //MIDDLEWARES
 app.use(cors());
 app.use(json());
@@ -28,6 +31,11 @@ app.use(
     }
   })
 );
+
+const path = require("path")
+app.get("*", (req, res, next) => {
+ res.sendFile(path.join(__dirname, "/../build/index.html"))
+})
 
 //USE TO TEST SERVER
 // app.get('/api/test', (req, res, next) => {
