@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
-
 .page-title {
-  font-size: 70px;
-  font-family: 'Kaushan Script', cursive;
+  font-size: 60px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
   text-align: center;
-  color: #252834;
-  margin-bottom: 15px;  
+  color: #ab3e16;
+  margin-bottom: 35px;  
 }
 
 .about {
   font-size: 25px;
-  background: #010516;
-  color: rgb(255, 255, 255);
+  background: #efaa52;
+  color: #f8f3e6;
   text-align: center;
-  padding: 30px;
-  margin: -25px;
+  padding: 40px;
+  margin: -35px;
 }
 
 *,

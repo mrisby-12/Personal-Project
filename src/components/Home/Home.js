@@ -50,8 +50,8 @@ class Home extends Component {
                 width="480"
                 height="270"
                 src="https://www.youtube.com/embed/KgMpKsp23yY?autoplay=1&controls=0&disablekb=0&enablejsapi=1&fs=0&loop=1&modestbranding=1&playsinline=1&rel=0&showinfo=0&amp;start=4&iv_load_policy=3"
-                frameborder="0"
-                allowfullscreen
+                frameBorder="0"
+                allowFullScreen
               />
             </div>
             <div className="gallery-item">

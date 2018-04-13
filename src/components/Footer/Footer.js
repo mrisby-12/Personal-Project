@@ -8,13 +8,13 @@ const Footer = () => {
     <footer>
       <Grid>
         <Nav justified>
-          <NavItem eventKey={1} href="http://mkdesignit.com/" target="_blank">
+          <NavItem href="http://mkdesignit.com/" target="_blank">
             MK Design It
           </NavItem>
-          <NavItem eventKey={2} href='#'>
+          <NavItem href='#'>
             Contact 
           </NavItem>
-          <h4 align='center'>A MK Design It Creation <br /> © 2018 </h4>
+          <h4 style={{ textAlign: "center" }}>A MK Design It Creation <br /> © 2018 </h4>
         </Nav>
       </Grid>
     </footer>

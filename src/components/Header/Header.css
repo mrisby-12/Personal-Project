@@ -1,27 +1,25 @@
 .container {
-  background: #5a3f3a;
+  background: #48120e;
   height: 25vh;
   width: 100%;
 }
 
-h1 {
-  color: #e4d8ce;
-}
-
 .logo {
-  height: 90px;
-  width: 90px;
-  margin-right: 1em;
+  height: 225px;
+  width: 225px;
+  padding-bottom: 1em;
+  margin: 0 auto;
 }
 
 .log-in {
   float: right;
-  color: #e4d8ce;
+  color: #f8f3e6;
   margin: 15px;
+  
 }
 
 .log-in button {
-  background: #7d6577;
+  background: #ab3e16;
   height: 50px;
   width: 150px;
   margin: 20px auto;
@@ -30,18 +28,38 @@ h1 {
 }
 
 .log-in button:hover {
-  background: #c2adbd;
+  background: #efaa52;
   transition-duration: 0.6s;
   transition-timing-function: ease;
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #e4d8ce;
+  color: #f8f3e6;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #efaa52;
+}
+
+.navbar-default .navbar-nav > li > a:focus {
+  color: #efaa52;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #ab3e16;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #efaa52;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ab3e16;
 }
 
 aside.ScrollUpButton__Container.ScrollUpButton__Toggled {
-  background-color: #7d6577 !important;
-  color: #e4d8ce !important;
+  background-color: #ab3e16 !important;
+  color: #e7cc8f !important;
 }
 
 .nav-links {
@@ -61,23 +79,30 @@ aside.ScrollUpButton__Container.ScrollUpButton__Toggled {
   }
   .navbar > .container .navbar-brand-centered,
   .navbar > .container-fluid .navbar-brand-centered {
-    margin-left: -80px;
+    margin-left: -130px;
   }
   .nav {
     margin: 40px;
-    margin-left: -15px;
-    color: #e4d8ce;
-    padding: 35px;
+    color: #f8f3e6;
   }
+  
 }
 
 @media only screen and (max-width: 768px) {
   .log-in button {
     width: 85px;
     position: relative;
-    left: 50%;
+    left: 40%;
+  }
+  .log-in {
+    position: absolute;
+    top: 60px;
+    right: 15px;
   }
   .nav {
-    color: #e4d8ce;
+    color: #f8f3e6;
+  }
+  div#navbar-brand-centered.collapse.navbar-collapse {
+    padding-left: 25px;
   }
 }

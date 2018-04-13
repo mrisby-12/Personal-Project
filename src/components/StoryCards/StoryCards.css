@@ -1,12 +1,15 @@
 h2 {
-  font-size: 80px;
-  font-family: "Kaushan Script", cursive;
+  font-size: 60px;
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-weight: bold;
   text-align: center;
-  color: #100f29;
+  color: #ab3e16;
   margin-bottom: 20px;
 }
 
 h3 {
+  color: #48120e;
   text-align: center;
   margin: 20px;
 }
@@ -15,7 +18,7 @@ h3 {
   box-sizing: border-box;
   height: 100%;
   max-width: 100rem;
-  background: #513d3c;
+  background: #efaa52;
   margin: 0 auto;
 }
 
@@ -33,7 +36,7 @@ h3 {
   display: block;
   margin: 40px;
   line-height: 1.42857143;
-  background-color: #fff;
+  background-color: #f8f3e6;
   border-radius: 2px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   transition: box-shadow 0.25s;
@@ -44,7 +47,7 @@ h3 {
 }
 
 .card-body {
-  background: #e4d8ce;
+  background: #f8f3e6;
   padding: 10px;
 }
 
@@ -54,17 +57,17 @@ h3 {
 
 .button {
   margin: 20px 5px;
-  background: #7d6577;
-  color: #e4d8ce;
+  background: #ab3e16;
+  color: #f8f3e6;
   font-size: 20px;
 }
 
 .button:hover {
-  background: #c2adbd;
+  background: #efaa52;
 }
 
 .badge {
-  background: #100f29;
+  background: #48120e;
   font-size: 15px;
 }
 

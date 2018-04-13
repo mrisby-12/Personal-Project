@@ -17,8 +17,8 @@ section {
   flex-basis: 0;
   padding: 10px 0;
   text-align: center;
-  border: 1px solid #5a3f3a;
-  background: #c2adbd;
+  border: 1px solid #efaa52;
+  background: #e7cc8f;
 }
 
 section:nth-of-type(5) .column:first-of-type {
@@ -35,6 +35,6 @@ section:nth-of-type(6) .column:nth-of-type(2) {
 
 div.column > a {
   text-decoration: none;
-  color: #100f29;
+  color: #48120e;
   font-weight: bold;
 }

@@ -1,6 +1,6 @@
 .scroll {
   opacity: 0.3;
-  background-color: darkgray;
+  background-color: #ab3e16;
   width: 40px;
   height: 40px;
   position: fixed;
@@ -13,10 +13,11 @@
 
 .scroll:hover {
   opacity: 1;
+  color: efaa52;
 }
 
 .arrow-up {
-  color: white;
+  color: #f8f3e6;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -25,5 +26,5 @@
 }
 
 .scroll-button {
-  color: #C2ADBD;
+  color: #ab3e16;
 }

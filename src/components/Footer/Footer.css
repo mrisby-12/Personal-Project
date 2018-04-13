@@ -1,22 +1,24 @@
 footer {
-  height: 15vh;
   margin-top: 60px;
 }
 
 a {
-  color: #e4d8ce;
+  color: #f8f3e6;
 }
 
 a:hover {
-  color: #513D3C;
+  color: #ab3e16;
 }
 
+li {
+  padding: 10px;
+}
 .ul.nav.nav-justified {
   margin: 0;
 }
 
 .nav>li>a:hover, .nav>li>a:focus {
-  background-color: #7d6577;
+  background-color: #efaa52;
 }
 
 @media screen and (min-width: 768px) {

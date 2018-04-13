@@ -24,7 +24,6 @@ class Header extends Component {
             </button>
             <div className="navbar-brand navbar-brand-centered">
               <img className="logo" src={Logo} alt="logo" />
-              <h1>Inspiration</h1>
             </div>
             <div
               className="collapse navbar-collapse"
