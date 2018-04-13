@@ -24,14 +24,14 @@ class App extends Component {
   } 
   handleUserSubmit(user) {
     console.log(newUser)
-    const usersRef = firebase.database().ref("users");
+    const usersRef = firebase.database().ref("users/" + user.uid);
     const newUser = {
       userId: user.uid,
       displayName: user.displayName,
       email: user.email,
       phone: user.phoneNumber
     };
-    usersRef.push(newUser);
+    usersRef.update(newUser);
     
   }
   logout() {
