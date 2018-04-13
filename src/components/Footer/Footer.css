@@ -1,0 +1,26 @@
+footer {
+  height: 15vh;
+  margin-top: 60px;
+}
+
+a {
+  color: #e4d8ce;
+}
+
+a:hover {
+  color: #513D3C;
+}
+
+.ul.nav.nav-justified {
+  margin: 0;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+  background-color: #7d6577;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    margin: 0;
+  }
+}

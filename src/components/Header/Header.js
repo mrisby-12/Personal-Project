@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./logo.png";
-import { auth, provider } from "../../firebase/firebase";
-import firebase from "../../firebase/firebase";
 import "./Header.css";
 
 class Header extends Component {
@@ -34,15 +32,18 @@ class Header extends Component {
             >
               <ul className="nav navbar-nav">
                 <li className="nav-links">
-                  <Link to="/"> Home </Link>
+                  <Link to="/"> HOME </Link>
                 </li>
                 <li className="nav-links">
-                  <Link to="/storycard"> StoryCard </Link>
+                  <Link to="/storycards"> STORYCARDS </Link>
+                </li>
+                <li className="nav-links">
+                  <Link to="/resources"> RESOURCES </Link>
                 </li>
                 {this.props.user &&
                   this.props.user.uid === "Gdy8DXrajWQf8y6rkMm4qnCDpFj1" && (
                     <li className="nav-links">
-                      <Link to="/admin"> Admin </Link>
+                      <Link to="/admin"> ADMIN </Link>
                     </li>
                   )}
               </ul>

@@ -9,9 +9,9 @@ import {
   CardText
 } from "mdbreact";
 import firebase from "../../firebase/firebase";
-import "./StoryCard.css";
+import "./StoryCards.css";
 
-class StoryCard extends Component {
+class StoryCards extends Component {
   constructor(props) {
     super(props);
 
@@ -76,6 +76,7 @@ class StoryCard extends Component {
     return (
       <div>
         <h2>StoryCards</h2>
+        <h3>Vote For Your Favorite Website</h3>
         <Carousel
           className="carousel"
           activeIndex={index}
@@ -120,4 +121,4 @@ class StoryCard extends Component {
     );
   }
 }
-export default StoryCard;
+export default StoryCards;

@@ -1,13 +1,18 @@
 import React, { Component } from "react";
 import "./Home.css";
-import StoryCard from "../StoryCard/StoryCard";
+
 
 class Home extends Component {
   render() {
     return (
       <div>
         <div className="image-container">
-          <div className="page-title animated">Hello World!</div>
+          <div className="page-title">Hello World!</div>
+          <div className="about">
+            <i>A site designed to "Inspire" Developers and Designers </i><br />
+            <hr />Visit StoryCards to vote on your favorite websites <br />Take
+            a look at Resources for tips & tricks of the trade
+          </div>
           <div className="gallery">
             <div className="gallery-item">
               <img
@@ -39,6 +44,7 @@ class Home extends Component {
             </div>
             <div className="gallery-item">
               <iframe
+                title="uniqueTitle"
                 id="ytplayer"
                 type="text/html"
                 width="480"
@@ -77,8 +83,6 @@ class Home extends Component {
               />
             </div>
           </div>
-          <hr />
-          <StoryCard />
         </div>
       </div>
     );

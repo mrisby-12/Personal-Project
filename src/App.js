@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom"
-import routes from "./routes";
+import { auth, provider } from "./firebase/firebase";
+import firebase from "./firebase/firebase";
+
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ScrollButton from "./components/ScrollButton/ScrollButton";
 import Home from './components/Home/Home';
 import Admin from './components/Admin/Admin';
-import StoryCard from './components/StoryCard/StoryCard';
-import { auth, provider, facebookProvider } from "./firebase/firebase";
-import firebase from "./firebase/firebase";
+import Resources from './components/Resources/Resources';
+import StoryCards from './components/StoryCards/StoryCards';
 
 
 class App extends Component {
@@ -38,7 +39,7 @@ class App extends Component {
     });
   }
   login() {
-    auth.signInWithPopup(provider, facebookProvider).then(result => {
+    auth.signInWithPopup(provider).then(result => {
       const user = result.user;
       this.handleUserSubmit(user);
       this.setState({
@@ -70,9 +71,17 @@ class App extends Component {
             )}
           />
           <Route
-            path="/storycard"
+            path="/storycards"
             render={() => (
-              <StoryCard
+              <StoryCards
+                
+              />
+            )}
+          />
+          <Route
+            path="/resources"
+            render={() => (
+              <Resources
                 
               />
             )}
