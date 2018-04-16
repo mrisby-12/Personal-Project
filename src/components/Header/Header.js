@@ -4,10 +4,8 @@ import Logo from "./logo.png";
 import "./Header.css";
 
 class Header extends Component {
-
-
   render() {
-    const { login, logout }=this.props
+    const { login, logout } = this.props;
     return (
       <nav className="navbar navbar-default">
         <div className="container">

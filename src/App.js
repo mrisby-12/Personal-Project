@@ -23,7 +23,6 @@ class App extends Component {
     this.logout = this.logout.bind(this);
   } 
   handleUserSubmit(user) {
-    console.log(newUser)
     const usersRef = firebase.database().ref("users/" + user.uid);
     const newUser = {
       userId: user.uid,
